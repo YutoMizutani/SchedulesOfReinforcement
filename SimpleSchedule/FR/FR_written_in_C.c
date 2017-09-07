@@ -10,7 +10,7 @@
 
 // Function definition in Clang
 int decisionFR(int numOfResp, int value) {
-  return numOfResp % value == 0;
+	return numOfResp % value == 0;
 }
    	
 // Call a function
