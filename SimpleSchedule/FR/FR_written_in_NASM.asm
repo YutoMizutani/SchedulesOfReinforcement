@@ -19,8 +19,8 @@ section .text
 
 ; Call a Subroutine
 start:
-	mov		rax, 10 ; numOfResp ; 10
-	mov		rbx, 5 ; value ; 5 
+	mov		rax, 10		; numOfResp ; 10
+	mov		rbx, 5		; value ; 5 
 	call	.decisionFR
     jmp		.end
 
@@ -41,14 +41,14 @@ start:
     ret
     
 .false:
-	mov		rax, 0x2000004 ; write
-	mov     rdi, 1 ; stdout
+	mov		rax, 0x2000004		; write
+	mov     rdi, 1 				; stdout
     lea		rsi, [rel falseStr]
     mov		rdx, falseStr.len
     syscall
     ret
     
 .end:
-    mov		rax, 0x2000001      ; System call number for exit = 1
-    mov		rdi, 0              ; Exit success = 0
-    syscall                 ; Invoke the kernel
+    mov		rax, 0x2000001
+    mov		rdi, 0 
+    syscall
